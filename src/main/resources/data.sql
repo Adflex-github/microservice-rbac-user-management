@@ -8,14 +8,14 @@ DELETE FROM contacts;
 DELETE FROM addresses;
 DELETE FROM users;
 
-INSERT INTO permissions(id, permission, note) VALUES (1, 'LOGIN', 'User Login');
-INSERT INTO permissions(id, permission, note) VALUES (2, 'VIEW_PROFILE', 'View user profile');
-INSERT INTO permissions(id, permission, note) VALUES (3, 'ADMIN_USER_DATA', 'Manage user data');
+INSERT INTO permissions( permission, note) VALUES ( 'LOGIN', 'User Login');
+INSERT INTO permissions( permission, note) VALUES ( 'VIEW_PROFILE', 'View user profile');
+INSERT INTO permissions( permission, note) VALUES ( 'ADMIN_USER_DATA', 'Manage user data');
 
-INSERT INTO permissions(id, permission, note, enabled) VALUES (4, 'ADMIN_STATISTICS', 'View statistical graphs', false);
+INSERT INTO permissions( permission, note, enabled) VALUES ( 'ADMIN_STATISTICS', 'View statistical graphs', false);
 
-INSERT INTO roles(id, role) VALUES (1, 'USER');
-INSERT INTO roles(id, role) VALUES (2, 'ADMINISTRATOR');
+INSERT INTO roles( role) VALUES ( 'USER');
+INSERT INTO roles( role) VALUES ( 'ADMINISTRATOR');
 
 INSERT INTO permissions_roles(permission_id, role_id) VALUES (1, 1);
 INSERT INTO permissions_roles(permission_id, role_id) VALUES (2, 1);
@@ -25,14 +25,14 @@ INSERT INTO permissions_roles(permission_id, role_id) VALUES (2, 2);
 INSERT INTO permissions_roles(permission_id, role_id) VALUES (3, 2);
 
 
-INSERT INTO users(id, username, password, name, surname, gender) VALUES (1, 'andrea', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Andrea', 'Test', 0);
-INSERT INTO users(id, username, password, name, surname, gender) VALUES (2, 'mario', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Mario', 'Rossi', 0);
-INSERT INTO users(id, username, password, name, surname, gender) VALUES (3, 'stefania', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Stefania', 'Verdi', 1);
-INSERT INTO users(id, username, password, name, surname, gender) VALUES (4, 'veronica', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Veronica', 'Gialli', 1);
-INSERT INTO users(id, username, password, name, surname, gender) VALUES (5, 'mark', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Mark', 'Green', 0);
-INSERT INTO users(id, username, password, name, surname, gender) VALUES (6, 'paul', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Paul', 'Ludwing', 0);
-INSERT INTO users(id, username, password, name, surname, gender) VALUES (7, 'jennifer', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Jennifer', 'Red', 0);
-INSERT INTO users(id, username, password, name, surname, gender) VALUES (8, 'karina', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Karina', 'Yellow', 1);
+INSERT INTO users( username, password, name, surname, gender) VALUES ( 'andrea', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Andrea', 'Test', 0);
+INSERT INTO users( username, password, name, surname, gender) VALUES ('mario', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Mario', 'Rossi', 0);
+INSERT INTO users( username, password, name, surname, gender) VALUES ( 'stefania', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Stefania', 'Verdi', 1);
+INSERT INTO users( username, password, name, surname, gender) VALUES ( 'veronica', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Veronica', 'Gialli', 1);
+INSERT INTO users( username, password, name, surname, gender) VALUES ( 'mark', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Mark', 'Green', 0);
+INSERT INTO users( username, password, name, surname, gender) VALUES ( 'paul', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Paul', 'Ludwing', 0);
+INSERT INTO users( username, password, name, surname, gender) VALUES ( 'jennifer', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Jennifer', 'Red', 0);
+INSERT INTO users( username, password, name, surname, gender) VALUES ( 'karina', '1d/NZaEqNgtEomytAPrwm/+QjmbudLg33oeEk77Xh88=', 'Karina', 'Yellow', 1);
 
 UPDATE users SET ENABLED = false WHERE id = 6;
 

@@ -1,9 +1,9 @@
 -- SQLINES DEMO *** sktop version to convert large SQL scripts,
 -- SQLINES DEMO *** ny issues with Online conversion.
-DROP TABLE IF EXISTS contacts;
-DROP TABLE IF EXISTS addresses;
+DROP TABLE IF EXISTS contacts CASCADE;
+DROP TABLE IF EXISTS addresses CASCADE;
 
-DROP TABLE IF EXISTS permissions_roles;
+DROP TABLE IF EXISTS permissions_roles CASCADE;
 DROP TABLE IF EXISTS users_roles;
 
 DROP TABLE IF EXISTS permissions;
